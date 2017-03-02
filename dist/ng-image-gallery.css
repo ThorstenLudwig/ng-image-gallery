@@ -176,6 +176,7 @@
         position: absolute;
         right: 10px;
         top: 20px; }
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .trash,
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url,
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close {
           position: relative;
@@ -187,11 +188,13 @@
           text-decoration: none;
           color: #fff;
           vertical-align: bottom; }
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .trash:hover,
           .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url:hover,
           .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:hover {
             -webkit-transition: background-color 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
             background-color: rgba(255, 255, 255, 0.1); }
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .trash:before,
           .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url:before,
           .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:before {
             content: "";
@@ -207,6 +210,12 @@
           background-image: url(../res/icons/external-link.svg); }
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:before {
           background-image: url(../res/icons/close.svg); }
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .trash:before {
+          background-image: url(../res/icons/trash.svg);
+          opacity: 0.3; }
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .trash:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          opacity: 0.5; }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .prev,
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .next {
         position: absolute;
