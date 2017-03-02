@@ -48,6 +48,7 @@
 				bgClose 		: 	'=?',		// true|flase
 				imgAnim 		: 	'@?',		// {name}
 
+                onTrash           :   '&?',       // function
 				onOpen 			: 	'&?',		// function
 				onClose 		: 	'&?'		// function
 			},
@@ -75,6 +76,8 @@
 									'<div class="destroy-icons-container">'+
 										// External link icon
 										'<a class="ext-url" ng-repeat="image in images track by $index" ng-if="activeImg == image && image.extUrl" href="{{image.extUrl}}"></a>'+
+			                            // Remove Icon (hidden in inline gallery)onTrash({picture: activeImg})
+			                            '<div class="trash" ng-click="methods.trash();" ng-if="!inline"></div>'+
 
 										// Close Icon (hidden in inline gallery)
 										'<div class="close" ng-click="methods.close();" ng-if="!inline"></div>'+
@@ -282,6 +285,11 @@
 						scope.activeImageIndex = 0; // Reset index
 					}, 300);
 				}
+
+				scope.methods.trash = function() {
+                    scope.onTrash(scope.activeImg);
+                    scope.methods.prev();
+                }
 
 				// Change image to next
 				scope.methods.next = function(){
